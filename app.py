@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Load the Linear regression model
-filename = 'C:/Users/prateek.kumar.kumbar/Desktop/Portfolio/GRE/University-Admission-Predictor-Deployment/GRE_model2.pkl'
+filename = 'GRE_model2.pkl'
 model1 = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
@@ -23,7 +23,6 @@ def predict():
         lor = int(request.form['LOR'])
         cgpa = float(request.form['CGPA'])
         research = float(request.form['Research'])
-        #age = int(request.form['age'])
         
         data = np.array([[gre, toefl, Univ, sop, lor, cgpa, research]])
         my_prediction = model1.predict(data)
