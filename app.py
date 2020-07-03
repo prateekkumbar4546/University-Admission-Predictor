@@ -23,12 +23,17 @@ def predict():
         lor = int(request.form['LOR'])
         cgpa = float(request.form['CGPA'])
         research = float(request.form['Research'])
+        #age = int(request.form['age'])
         
         data = np.array([[gre, toefl, Univ, sop, lor, cgpa, research]])
         my_prediction = model1.predict(data)
         my_prediction = my_prediction*100
         my_prediction = my_prediction[0][0]
-        my_prediction = "{:.2f}".format(my_prediction)
+        if my_prediction<=0:
+            my_prediction = 0
+            print("negative")
+        else: 
+            my_prediction = "{:.2f}".format(my_prediction)
         
         return render_template('result.html', prediction=my_prediction)
 
