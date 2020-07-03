@@ -39,14 +39,14 @@ body{
 }
 
 .heading_font{
-    color: #000000;
+    color: #ffffff;
 	font-family: "Times New Roman", Times, serif;
-	font-size: 35px;
+	font-size: 40px;
 	font-weight: normal;
 }
 
 .description p{
-	color: #ffffff;
+	color: #000000;
     font-style: italic;
     font-size: 14px;
     margin: -5px 0 0;
