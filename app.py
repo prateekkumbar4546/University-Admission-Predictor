@@ -31,8 +31,7 @@ def predict():
         my_prediction = my_prediction[0][0]
         if my_prediction<=0:
             my_prediction = 0
-            print("negative")
-	elif my_prediction>100:
+        elif my_prediction>100:
              my_prediction=100
         else: 
             my_prediction = "{:.2f}".format(my_prediction)
