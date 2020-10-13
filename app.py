@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Load the Linear regression model
-filename = 'GRE_model2.pkl'
+filename = 'UAP.pkl'
 model1 = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
